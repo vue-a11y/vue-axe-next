@@ -17,7 +17,7 @@
     <PopupButton
       :popup-show="isOpen"
       :notifications="issuesFound"
-      @togglePopup="togglePopup"
+      @toggle-popup="togglePopup"
     />
   </div>
 </template>
