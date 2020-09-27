@@ -1,6 +1,6 @@
 <template>
   <button
-    class="va-popup__button"
+    class="va-default-btn va-btn"
     :data-notifications="notifications"
     aria-haspopup="true"
     aria-controls="va-popup-box"
@@ -21,6 +21,7 @@
       xmlns="http://www.w3.org/2000/svg"
       width="34"
       height="34"
+      aria-hidden="true"
     >
       <path
         d="M17 0a17 17 0 1017 17A17 17 0 0017 0zm-.3 3.4a2.2 2.2 0 11-2.2 2.2 2.2 2.2 0 012.2-2.2zm9.6 7l-6.6.9v6.5L23 28.4A1.2 1.2 0 0122 30a1.2 1.2 0 01-1.5-.8l-3.2-9.7h-1l-3 9.9a1.2 1.2 0 01-1.6.6 1.3 1.3 0 01-.8-1.6L13.6 18v-6.7l-6-.8a1 1 0 01-1-1.2 1.1 1.1 0 011.3-1l7.3.6h3.2l7.8-.7a1.1 1.1 0 010 2.3z"
@@ -32,6 +33,7 @@
       xmlns="http://www.w3.org/2000/svg"
       width="26.2"
       height="26.2"
+      aria-hidden="true"
     >
       <path
         d="M24.1 2.1l-22 22m0-22l22 22"
@@ -74,7 +76,7 @@ export default {
 </script>
 
 <style scoped>
-.va-popup__button {
+.va-btn {
   position: relative;
   outline: none;
   appearance: none;
@@ -94,7 +96,7 @@ export default {
   transition: box-shadow .1s;
 }
 
-.va-popup__button:focus, .va-popup__button:hover {
+.va-btn:focus, .va-btn:hover {
   box-shadow: 0 0 0 3px var(--va-outline-color);
 }
 
