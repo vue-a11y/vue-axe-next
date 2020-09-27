@@ -28,8 +28,7 @@ export default function useAxe (axeOptions) {
     context = document,
     runOptions = axeOptions.runOptions,
     force = false
-  } = {})
-  {
+  } = {}) {
     if (force) resetLastNotification()
     nextTick(() => axeCoreRun(context, runOptions))
   }
@@ -40,7 +39,7 @@ export default function useAxe (axeOptions) {
         if (!obj[impact]) {
           obj[impact] = []
         }
-        if (data.impact === impact) obj[impact].push(data)               
+        if (data.impact === impact) obj[impact].push(data)
       })
       return obj
     }, {})
