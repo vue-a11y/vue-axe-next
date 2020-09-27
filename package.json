@@ -11,10 +11,10 @@
   ],
   "scripts": {
     "build": "npm run build:umd & npm run build:es & npm run build:unpkg",
-    "build:umd": "rollup --config build/rollup.config.js --format cjs --file dist/vue-axe.cjs.js",
+    "build:umd": "rollup --config build/rollup.config.js --format cjs --file dist/vue-axe.ssr.js",
     "build:es": "rollup --config build/rollup.config.js --format es --file dist/vue-axe.esm.js",
     "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/vue-axe.min.js",
-    "demo:dev": "cd demo && npm run serve",
+    "demo:dev": "cd demo && npm run dev",
     "demo:build": "cd demo && npm run build",
     "demo:publish": "surge ./demo/dist https://vue-axe.surge.sh/",
     "docs:dev": "vuepress dev docs --no-cache",
