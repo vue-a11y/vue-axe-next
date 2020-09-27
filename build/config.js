@@ -4,6 +4,7 @@ import PostCSS from 'rollup-plugin-postcss'
 import resolve from '@rollup/plugin-node-resolve'
 
 export default {
+  entry: path.resolve(__dirname, '../src/index.js'),
   plugins: {
     alias: [
       alias({

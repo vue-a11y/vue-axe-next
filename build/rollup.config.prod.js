@@ -10,7 +10,7 @@ import defaultConfig from './config'
 
 export default commandLineArgs => {
   return {
-    input: 'src/index.js',
+    input: defaultConfig.entry,
     plugins: [
       replace({
         'process.env.NODE_ENV': JSON.stringify('production')
@@ -25,7 +25,10 @@ export default commandLineArgs => {
         ...defaultConfig.plugins.babel,
         presets: [
           [
-            '@babel/preset-env'
+            '@babel/preset-env',
+            {
+              targets: '> 1%, last 2 versions, not dead'
+            }
           ]
         ]
       }),

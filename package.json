@@ -10,19 +10,14 @@
     "dist/*"
   ],
   "scripts": {
+    "dev": "rollup --config build/rollup.config.dev.js --watch",
     "build": "npm run build:umd & npm run build:es & npm run build:unpkg",
-    "build:umd": "rollup --config build/rollup.config.js --format cjs --file dist/vue-axe.ssr.js",
-    "build:es": "rollup --config build/rollup.config.js --format es --file dist/vue-axe.esm.js",
-    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/vue-axe.min.js",
-    "demo:dev": "cd demo && npm run dev",
-    "demo:build": "cd demo && npm run build",
-    "demo:publish": "surge ./demo/dist https://vue-axe.surge.sh/",
-    "docs:dev": "vuepress dev docs --no-cache",
-    "docs:build": "vuepress build docs --no-cache && echo axe.vue-a11y.com >> docs/.vuepress/dist/CNAME",
-    "docs:publish": "gh-pages -d docs/.vuepress/dist",
+    "build:umd": "rollup --config build/rollup.config.prod.js --format cjs --file dist/vue-axe.ssr.js",
+    "build:es": "rollup --config build/rollup.config.prod.js --format es --file dist/vue-axe.esm.js",
+    "build:unpkg": "rollup --config build/rollup.config.prod.js --format iife --file dist/vue-axe.min.js",
+    "demo:cli": "cd demo-cli && npm run serve",
+    "demo:vite": "cd demo-vite && npm run dev",
     "release": "standard-version",
-    "test:e2e": "node_modules/.bin/cypress run --headless",
-    "test:e2e:open": "node_modules/.bin/cypress open",
     "project:publish": "git push --tags origin master && npm run build && npm publish --tag beta"
   },
   "repository": {
@@ -92,6 +87,7 @@
     "eslint-plugin-vue": "^7.0.0-beta.4",
     "eslint-plugin-vuejs-accessibility": "^0.5.1",
     "rollup": "^2.28.2",
+    "rollup-plugin-eslint": "^7.0.0",
     "rollup-plugin-peer-deps-external": "^2.2.3",
     "rollup-plugin-postcss": "^3.1.8",
     "rollup-plugin-terser": "^7.0.2",
