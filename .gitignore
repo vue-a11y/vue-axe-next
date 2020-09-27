@@ -1,0 +1,10 @@
+.idea
+node_modules
+.editorconfig
+.DS_Store
+demo/vue-axe.js
+demo/node_modules
+demo/dist
+demo/package-lock.json
+demo/CNAME
+dist
