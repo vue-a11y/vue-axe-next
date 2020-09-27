@@ -1,7 +1,7 @@
 <template>
   <div class="va-popup__footer">
     <button
-      class="va-popup__btn-run va-nostyle-button"
+      class="va-default-btn va-popup__btn-run va-nostyle-button"
       type="button"
       aria-labelledby="va-btn-run-label"
       @click="run({ force: true })"
@@ -22,7 +22,7 @@
 
 <script>
 import { inject } from 'vue'
-import { vueAxe } from '../utils/constants'
+import { vueAxe } from '@/utils/constants'
 
 export default {
   name: 'PopupFooter',
@@ -50,13 +50,6 @@ export default {
 .va-popup__btn-run {
   display: flex;
   align-items: center;
-  background: none;
-  border: none;
-  -moz-appearance: none;
-  appearance: none;
-  -webkit-appearance: none;
-  cursor: pointer;
-  font-family: inherit;
   padding: 14px 20px;
   border-right: 1px solid var(--va-border-color);
 }

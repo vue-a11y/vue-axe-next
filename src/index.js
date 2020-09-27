@@ -1,4 +1,4 @@
-import useVueAxe from './composables/useVueAxe'
+import useVueAxe from '@/composables/useVueAxe'
 
 export default function install (app, options = {}) {
   if (typeof window === 'undefined') return

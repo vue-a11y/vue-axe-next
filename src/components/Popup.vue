@@ -24,13 +24,13 @@
 
 <script>
 import { computed, inject } from 'vue'
-import useDisclosure from '../composables/useDisclosure'
-import { vueAxe } from '../utils/constants'
+import useDisclosure from '@/composables/useDisclosure'
+import { vueAxe } from '@/utils/constants'
 
-import PopupButton from './PopupButton.vue'
-import PopupHeader from './PopupHeader.vue'
-import PopupBody from './PopupBody.vue'
-import PopupFooter from './PopupFooter.vue'
+import PopupButton from '@/components/PopupButton.vue'
+import PopupHeader from '@/components/PopupHeader.vue'
+import PopupBody from '@/components/PopupBody.vue'
+import PopupFooter from '@/components/PopupFooter.vue'
 
 export default {
   name: 'Popup',
@@ -98,6 +98,20 @@ export default {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border-width: 0;
+}
+
+.va-default-btn {
+  background: none;
+  border: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.va-flex {
+  display: flex;
 }
 
 .va-popup {

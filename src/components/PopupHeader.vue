@@ -30,7 +30,7 @@
 
 <script>
 import { inject, ref, watch } from 'vue'
-import { vueAxe } from '../utils/constants'
+import { vueAxe } from '@/utils/constants'
 
 export default {
   name: 'PopupHeader',

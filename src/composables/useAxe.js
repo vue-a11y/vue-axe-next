@@ -1,6 +1,6 @@
 import axeCore from 'axe-core'
 import { ref, nextTick } from 'vue'
-import { impacts } from '../utils/constants'
+import { impacts } from '@/utils/constants'
 
 let lastNotification = 0
 
