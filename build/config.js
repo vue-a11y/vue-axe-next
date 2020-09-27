@@ -11,24 +11,24 @@ export default {
           {
             find: '@',
             replacement: `${path.resolve(__dirname, '../src')}`
-          },
+          }
         ],
         customResolver: resolve({
           extensions: ['.js', '.jsx', '.ts', '.tsx', '.vue']
-        }),
+        })
       })
     ],
     postcss: [
       PostCSS({
         modules: { generateScopedName: '[local]___[hash:base64:5]' },
-        include: /&module=.*\.css$/,
+        include: /&module=.*\.css$/
       }),
       PostCSS({ include: /(?<!&module=.*)\.css$/ })
     ],
     babel: {
       exclude: 'node_modules/**',
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.vue'],
-      babelHelpers: 'bundled',
+      babelHelpers: 'bundled'
     }
   }
 }
