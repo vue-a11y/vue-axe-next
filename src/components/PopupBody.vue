@@ -30,7 +30,7 @@
               <div class="va-flex">
                 <span :class="`va-popup-subitem__disc va-popup-subitem__disc--${violation.impact}`">●</span>
                 <span :id="`violation-${violation.id}`">
-                  {{ violation.description }}
+                  {{ violation.description }} <strong v-show="violation.nodes.length > 1">{{ `(${violation.nodes.length})` }}</strong>
                 </span>
               </div>
               <button
