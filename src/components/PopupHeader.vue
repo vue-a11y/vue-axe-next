@@ -66,21 +66,19 @@ export default {
 </script>
 
 <style scoped>
-.va-p {
-  &__header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px var(--padding);
-    border-bottom: 1px solid var(--va-border-color);
-    background-color: var(--va-bg);
-    color: var(--va-color);
-  }
+.va-p__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px var(--padding);
+  border-bottom: 1px solid var(--va-border-color);
+  background-color: var(--va-bg);
+  color: var(--va-color);
+}
 
-  &__version {
-    text-align: right;
-    font-size: 14px;
-    font-weight: 500;
-  }
+.va-p__version {
+  text-align: right;
+  font-size: 14px;
+  font-weight: 500;
 }
 </style>

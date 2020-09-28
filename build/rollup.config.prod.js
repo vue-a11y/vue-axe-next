@@ -19,7 +19,11 @@ export default commandLineArgs => {
       resolve(),
       peerDepsExternal(),
       ...defaultConfig.plugins.alias,
-      vue(),
+      vue({
+        template: {
+          isProduction: true
+        }
+      }),
       ...defaultConfig.plugins.postcss,
       babel({
         ...defaultConfig.plugins.babel,

@@ -43,27 +43,25 @@ export default {
 </script>
 
 <style scoped>
-.va-p {
-  &__footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-top: 1px solid var(--va-border-color);
-    background-color: var(--va-bg);
-    color: var(--va-color);
-  }
+.va-p__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--va-border-color);
+  background-color: var(--va-bg);
+  color: var(--va-color);
+}
 
-  &__btn-run {
-    display: flex;
-    align-items: center;
-    padding: 14px 20px;
-    border-right: 1px solid var(--va-border-color);
+.va-p__btn-run {
+  display: flex;
+  align-items: center;
+  padding: 14px 20px;
+  border-right: 1px solid var(--va-border-color);
 
-    > span {
-      margin-left: 8px;
-      font-size: 1rem;
-      font-weight: 500;
-    }
+  > span {
+    margin-left: 8px;
+    font-size: 1rem;
+    font-weight: 500;
   }
 }
 </style>
