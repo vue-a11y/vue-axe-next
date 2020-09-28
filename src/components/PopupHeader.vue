@@ -1,5 +1,5 @@
 <template>
-  <div class="va-popup__header">
+  <div class="va-p__header">
     <a
       href="https://github.com/vue-a11y/vue-axe"
       target="_blank"
@@ -31,7 +31,7 @@
         </g>
       </svg>
     </a>
-    <div class="va-popup__version">
+    <div class="va-p__version">
       <span>vue-axe: {{ versions.vueAxe }}</span> <br>
       <span>axe-core: {{ versions.axeCore }}</span>
     </div>
@@ -66,19 +66,21 @@ export default {
 </script>
 
 <style scoped>
-.va-popup__header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px var(--padding);
-  border-bottom: 1px solid var(--va-border-color);
-  background-color: var(--va-bg);
-  color: var(--va-color);
-}
+.va-p {
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px var(--padding);
+    border-bottom: 1px solid var(--va-border-color);
+    background-color: var(--va-bg);
+    color: var(--va-color);
+  }
 
-.va-popup__version {
-  text-align: right;
-  font-size: 14px;
-  font-weight: 500;
+  &__version {
+    text-align: right;
+    font-size: 14px;
+    font-weight: 500;
+  }
 }
 </style>

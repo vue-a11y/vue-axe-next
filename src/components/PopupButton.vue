@@ -1,16 +1,16 @@
 <template>
   <button
-    class="va-default-btn va-btn"
+    class="va-btn va-p-btn"
     :data-notifications="notifications"
     aria-haspopup="true"
-    aria-controls="va-popup-box"
+    aria-controls="va-p-box"
     :aria-expanded="popupShow.toString()"
     :aria-label="ariaLabelButton"
     @click="$emit('toggle-popup')"
   >
     <span
       v-show="notifications && !popupShow"
-      class="va-popup__notification"
+      class="va-p__notification"
       aria-live="assertive"
       aria-atomic="true"
     >
@@ -78,7 +78,7 @@ export default {
 </script>
 
 <style scoped>
-.va-btn {
+.va-p-btn {
   position: relative;
   outline: none;
   background-color: var(--va-bg);
@@ -91,13 +91,13 @@ export default {
   padding-top: 2px;
   box-shadow: 2px 2px 3px 2px #dfdfdf;
   transition: box-shadow .1s;
+
+  &:focus, &:hover {
+    box-shadow: 0 0 0 3px var(--va-outline-color);
+  }
 }
 
-.va-btn:focus, .va-btn:hover {
-  box-shadow: 0 0 0 3px var(--va-outline-color);
-}
-
-.va-popup__notification {
+.va-p__notification {
   position: absolute;
   display: flex;
   align-items: center;

@@ -1,7 +1,7 @@
 <template>
-  <div class="va-popup__footer">
+  <div class="va-p__footer">
     <button
-      class="va-default-btn va-popup__btn-run va-nostyle-button"
+      class="va-btn va-p__btn-run"
       type="button"
       aria-labelledby="va-btn-run-label"
       @click="run({ force: true })"
@@ -43,25 +43,27 @@ export default {
 </script>
 
 <style scoped>
-.va-popup__footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-top: 1px solid var(--va-border-color);
-  background-color: var(--va-bg);
-  color: var(--va-color);
-}
+.va-p {
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid var(--va-border-color);
+    background-color: var(--va-bg);
+    color: var(--va-color);
+  }
 
-.va-popup__btn-run {
-  display: flex;
-  align-items: center;
-  padding: 14px 20px;
-  border-right: 1px solid var(--va-border-color);
-}
+  &__btn-run {
+    display: flex;
+    align-items: center;
+    padding: 14px 20px;
+    border-right: 1px solid var(--va-border-color);
 
-.va-popup__btn-run > span {
-  margin-left: 8px;
-  font-size: 1rem;
-  font-weight: 500;
+    > span {
+      margin-left: 8px;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+  }
 }
 </style>

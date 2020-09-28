@@ -1,0 +1,13 @@
+:root {
+  --va-bg: white;
+  --padding: 16px;
+  --va-color: #333;
+  --va-bg-item: #fbfcfc;
+  --va-border-color: #dfe8e8;
+  --va-outline-color: var(--va-color);
+  --va-critical: #D93251;
+  --va-serious:#DB006E;
+  --va-moderate: #996B00;
+  --va-minor: #000;
+  --va-font-family: 'Segoe UI', Roboto, 'Fira Sans', Helvetica, 'Helvetica Neue', sans-serif;
+}

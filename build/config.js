@@ -21,10 +21,13 @@ export default {
     ],
     postcss: [
       PostCSS({
-        modules: { generateScopedName: '[local]___[hash:base64:5]' },
-        include: /&module=.*\.css$/
-      }),
-      PostCSS({ include: /(?<!&module=.*)\.css$/ })
+        include: /(?<!&module=.*)\.css$/,
+        plugins: [
+          require('postcss-import'),
+          require('postcss-nested'),
+          require('autoprefixer')
+        ]
+      })
     ],
     babel: {
       exclude: 'node_modules/**',

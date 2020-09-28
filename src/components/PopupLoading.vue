@@ -3,7 +3,7 @@
   <!-- Todo: add easing -->
   <div
     v-show="loading"
-    class="va-popup__loading"
+    class="va-p__loading"
   >
     <svg
       width="100"
@@ -107,7 +107,7 @@ export default {
 </script>
 
 <style scoped>
-.va-popup__loading {
+.va-p__loading {
   position: absolute;
   top: 0;
   left: 0;
