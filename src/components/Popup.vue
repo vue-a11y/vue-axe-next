@@ -35,6 +35,8 @@ import PopupFooter from '@/components/PopupFooter'
 export default {
   name: 'Popup',
 
+  disableAxeAudit: true,
+
   components: {
     PopupHeader,
     PopupBody,

@@ -30,6 +30,8 @@ import { vueAxe } from '@/utils/constants'
 export default {
   name: 'PopupFooter',
 
+  disableAxeAudit: true,
+
   setup () {
     const { run } = inject(vueAxe)
 

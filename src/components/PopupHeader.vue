@@ -45,6 +45,8 @@ import { vueAxe } from '@/utils/constants'
 export default {
   name: 'PopupHeader',
 
+  disableAxeAudit: true,
+
   setup () {
     const { version, results } = inject(vueAxe)
     const versions = ref({

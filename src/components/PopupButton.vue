@@ -53,6 +53,8 @@ import { computed } from 'vue'
 export default {
   name: 'PopupButton',
 
+  disableAxeAudit: true,
+
   props: {
     popupShow: {
       type: Boolean,
@@ -79,20 +81,15 @@ export default {
 .va-btn {
   position: relative;
   outline: none;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   background-color: var(--va-bg);
   color: var(--va-color);
   border: none;
-  cursor: pointer;
   border-radius: 50%;
   width: 60px;
   height: 60px;
   display: inline-block;
   padding-top: 2px;
   box-shadow: 2px 2px 3px 2px #dfdfdf;
-  font-family: inherit;
   transition: box-shadow .1s;
 }
 
