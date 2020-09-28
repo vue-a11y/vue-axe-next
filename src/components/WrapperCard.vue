@@ -24,6 +24,8 @@ export default {
     }
   },
 
+  emits: ['trigger'],
+
   setup (_, { emit }) {
     const up = ref(null)
     const down = ref(null)
