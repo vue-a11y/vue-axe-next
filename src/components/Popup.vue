@@ -27,10 +27,10 @@ import { computed, inject } from 'vue'
 import useDisclosure from '@/composables/useDisclosure'
 import { vueAxe } from '@/utils/constants'
 
-import PopupButton from '@/components/PopupButton.vue'
-import PopupHeader from '@/components/PopupHeader.vue'
-import PopupBody from '@/components/PopupBody.vue'
-import PopupFooter from '@/components/PopupFooter.vue'
+import PopupButton from '@/components/PopupButton'
+import PopupHeader from '@/components/PopupHeader'
+import PopupBody from '@/components/PopupBody'
+import PopupFooter from '@/components/PopupFooter'
 
 export default {
   name: 'Popup',
@@ -72,12 +72,12 @@ export default {
   --va-bg: white;
   --padding: 16px;
   --va-color: #333;
-  --va-bg-item: #FDFDFE;
+  --va-bg-item: #fbfcfc;
   --va-border-color: #dfe8e8;
   --va-outline-color: var(--va-color);
   --va-critical: #D93251;
-  --va-serious: #C75000;
-  --va-moderate: #9C6C00;
+  --va-serious:#DB006E;
+  --va-moderate: #996B00;
   --va-minor: #000;
   --font-family: 'Segoe UI', Roboto, 'Fira Sans', Helvetica, 'Helvetica Neue', sans-serif;
 }
@@ -123,7 +123,7 @@ export default {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
-  max-width: 380px;
+  max-width: 420px;
   margin-left: 20px;
   -webkit-font-smoothing: antialiased;
 }

@@ -9,10 +9,10 @@
     @click="$emit('toggle-popup')"
   >
     <span
+      v-show="notifications && !popupShow"
       class="va-popup__notification"
       aria-live="assertive"
       aria-atomic="true"
-      v-show="notifications && !popupShow"
     >
       {{ notifications }} <span class="va-sr-only">issue found by axe-core</span>
     </span>
