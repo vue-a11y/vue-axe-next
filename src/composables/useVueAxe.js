@@ -21,7 +21,7 @@ export default function useVueAxe (options) {
     if (axeOptions.auto) {
       app.mixin({
         updated () {
-          if (this.$.type.disableAxeAudit || this.$.type.name === 'BaseTransition') return
+          if (this.$.type.disableAxeAudit || this.$.type.name.toLowerCase().indexOf('transition') !== -1) return
           axe.loading.value = true
           const run = debounce(axe.run, 2500)
           run()
