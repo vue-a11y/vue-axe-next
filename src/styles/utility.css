@@ -2,6 +2,39 @@
   display: flex;
 }
 
+.va-items-center {
+  align-items: center;
+}
+
+.va-justify-between {
+  justify-content: space-between;
+}
+
+.va-critical {
+  color: var(--va-critical);
+}
+
+.va-serious {
+  color: var(--va-critical);
+}
+
+.va-moderate {
+  color: var(--va-critical);
+}
+
+.va-minor {
+  color: var(--va-critical);
+}
+
+/* Font */
+.va-capitalize {
+  text-transform: capitalize;  
+}
+
+.va-font-medium {
+  font-weight: 500;
+}
+
 .va-sr-only {
   position: absolute;
   width: 1px;
