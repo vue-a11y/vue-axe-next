@@ -21,11 +21,11 @@
               v-for="violation in result"
               :key="`subitem-${violation.id}`"
               tag="li"
-              class="va-p-subitem va-px-2 va-py-3 va-flex va-justify-between va-items-start va-rounded-md hover:va-bg-primary"
+              class="va-p-subitem va-px-2 va-py-3 va-flex va-justify-between va-items-start hover:va-bg-primary"
               @trigger="$emit('show-details', violation)"
             >
-              <div class="va-flex">
-                <span :class="`va-pl-1 va-pr-2 va-text-${violation.impact}`">●</span>
+              <div class="va-flex va-items-start">
+                <span :class="`va-text-${violation.impact} va-text-2xl va-font-bold va-leading-4 va-mr-2`">&#8226;</span>
                 <span :id="`violation-${violation.id}`">
                   {{ violation.description }}.
                   <em v-show="violation.nodes.length > 1">
@@ -35,7 +35,7 @@
               </div>
               <button
                 type="button"
-                class="va-btn va-relative va-ml-2 va-py-1 va-px-3"
+                class="va-btn va-relative va-ml-2 va-pt-1 va-pb-2 va-px-3"
                 style="top: -2px"
                 :aria-labelledby="`see-more-${violation.id} violation-${violation.id}`"
                 @click="$emit('show-details', violation)"
@@ -44,21 +44,7 @@
                   :id="`see-more-${violation.id}`"
                   class="va-sr-only"
                 >See more</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="13.2"
-                  height="6.7"
-                  focusable="false"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M9.8.7l2.7 2.7m0 0L9.8 6m2.7-2.6H.5"
-                    fill="none"
-                    stroke="#000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
+                <IconArrowNarrow />
               </button>
             </WrapperCard>
           </ul>
@@ -74,13 +60,15 @@ import { vueAxe } from '@/utils/constants'
 
 import WrapperCard from '@/components/WrapperCard'
 import PopupLoading from '@/components/PopupLoading'
+import IconArrowNarrow from '@/components/IconArrowNarrow'
 
 export default {
   name: 'PopupBodyViolations',
 
   components: {
     WrapperCard,
-    PopupLoading
+    PopupLoading,
+    IconArrowNarrow
   },
 
   emits: ['show-details'],
