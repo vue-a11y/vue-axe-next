@@ -1,5 +1,5 @@
 <template>
-  <div class="va-p__header">
+  <div class="va-border-0 va-flex va-items-center va-justify-between va-py-3 va-px-4 va-border-b va-border-solid va-border-gray-200 va-bg-main va-text-color">
     <a
       href="https://github.com/vue-a11y/vue-axe"
       target="_blank"
@@ -31,7 +31,7 @@
         </g>
       </svg>
     </a>
-    <div class="va-p__version">
+    <div class="va-text-right va-text-sm va-font-medium">
       <span>vue-axe: {{ versions.vueAxe }}</span> <br>
       <span>axe-core: {{ versions.axeCore }}</span>
     </div>
@@ -64,21 +64,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.va-p__header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px var(--padding);
-  border-bottom: 1px solid var(--va-border-color);
-  background-color: var(--va-bg);
-  color: var(--va-color);
-}
-
-.va-p__version {
-  text-align: right;
-  font-size: 14px;
-  font-weight: 500;
-}
-</style>

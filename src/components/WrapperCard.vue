@@ -1,7 +1,7 @@
 <template>
   <component
     :is="tag"
-    class="wrapper-card"
+    class="va-cursor-pointer"
     @mousedown="onMouseEvent"
     @mouseup="onMouseEvent"
   >
@@ -54,9 +54,3 @@ export default {
   }
 }
 </script>
-
-<style>
-.wrapper-card {
-  cursor: pointer;
-}
-</style>

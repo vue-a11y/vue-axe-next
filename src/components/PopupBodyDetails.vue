@@ -47,9 +47,3 @@ export default {
   disableAxeAudit: true
 }
 </script>
-
-<style scoped>
-.va-details {
-  background-color: var(--va-bg);
-}
-</style>

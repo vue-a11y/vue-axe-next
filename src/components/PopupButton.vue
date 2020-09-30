@@ -1,20 +1,20 @@
 <template>
   <button
-    class="va-btn va-p-btn"
+    class="va-btn va-popup-btn va-w-16 va-h-16 va-relative va-outline-none va-bg-main va-text-color va-border-0 va-rounded-full va-inline-block va-pt-1"
     :data-notifications="notifications"
     aria-haspopup="true"
-    aria-controls="va-p-box"
+    aria-controls="va-popup-box"
     :aria-expanded="popupShow.toString()"
     :aria-label="ariaLabelButton"
     @click="$emit('toggle-popup')"
   >
     <span
       v-show="notifications && !popupShow"
-      class="va-p__notification"
+      class="va-absolute va-leading-3 va-w-8 va-h-8 va-flex va-items-center va-justify-center va-text-base va-rounded-full va-bg-notification va-font-bold va-text-color"
       aria-live="assertive"
       aria-atomic="true"
     >
-      {{ notifications }} <span class="va-sr-only">issue found by axe-core</span>
+      {{ notifications }} <span class="va-sr-only">accessibility issue found</span>
     </span>
     <svg
       v-show="!popupShow"
@@ -53,8 +53,6 @@ import { computed } from 'vue'
 export default {
   name: 'PopupButton',
 
-  disableAxeAudit: true,
-
   props: {
     popupShow: {
       type: Boolean,
@@ -67,6 +65,10 @@ export default {
     }
   },
 
+  emits: ['toggle-popup'],
+
+  disableAxeAudit: true,
+
   setup (props) {
     const ariaLabelButton = computed(() => `${props.popupShow ? 'Close' : 'Open'} vue axe popup`)
 
@@ -77,40 +79,18 @@ export default {
 }
 </script>
 
-<style scoped>
-.va-p-btn {
-  position: relative;
-  outline: none;
-  background-color: var(--va-bg);
-  color: var(--va-color);
-  border: none;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  display: inline-block;
-  padding-top: 2px;
+<style>
+.va-popup-btn {
   box-shadow: 2px 2px 3px 2px #dfdfdf;
   transition: box-shadow .1s;
 
   &:focus, &:hover {
     box-shadow: 0 0 0 3px var(--va-outline-color);
   }
-}
 
-.va-p__notification {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  left: -10px;
-  top: -10px;
-  width: 30px;
-  height: 30px;
-  font-size: 16px;
-  line-height: 0.8rem;
-  border-radius: 50%;
-  background-color: #FF885B;
-  font-weight: bold;
-  color: #222;
+  > span {
+    left: -10px;
+    top: -10px;
+  }
 }
 </style>

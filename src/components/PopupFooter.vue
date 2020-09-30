@@ -1,7 +1,7 @@
 <template>
-  <div class="va-p__footer">
+  <div class="va-flex va-items-center va-justify-between va-border-0 va-border-t va-border-solid va-border-gray-200 va-bg-main va-text-color">
     <button
-      class="va-btn va-p__btn-run"
+      class="va-btn va-flex va-items-center va-py-4 va-px-5 va-border-0 va-border-r va-border-solid va-border-gray-200 hover:va-bg-primary"
       type="button"
       aria-labelledby="va-btn-run-label"
       @click="run({ force: true })"
@@ -15,10 +15,13 @@
       >
         <path
           d="M.9 0a.9.9 0 01.9.9v1.9A6.2 6.2 0 0112 5a.9.9 0 11-1.7.6 4.4 4.4 0 00-7.7-1.2h2.6a.9.9 0 110 1.8H1a.9.9 0 01-.9-.9V1A.9.9 0 01.9 0zm0 8a.9.9 0 011.1.6 4.4 4.4 0 007.8 1.2H7a.9.9 0 010-1.8h4.4a.9.9 0 011 .9v4.4a.9.9 0 11-1.8 0v-1.8A6.2 6.2 0 01.4 9.2.9.9 0 01.9 8z"
-          fill-rule="evenodd"
+          fill="currentColor"
         />
       </svg>
-      <span id="va-btn-run-label">Run again</span>
+      <span
+        id="va-btn-run-label"
+        class="va-text-base va-font-medium va-ml-2"
+      >Run again</span>
     </button>
   </div>
 </template>
@@ -41,27 +44,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.va-p__footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-top: 1px solid var(--va-border-color);
-  background-color: var(--va-bg);
-  color: var(--va-color);
-}
-
-.va-p__btn-run {
-  display: flex;
-  align-items: center;
-  padding: 14px 20px;
-  border-right: 1px solid var(--va-border-color);
-
-  > span {
-    margin-left: 8px;
-    font-size: 1rem;
-    font-weight: 500;
-  }
-}
-</style>

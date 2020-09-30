@@ -3,7 +3,7 @@
   <!-- Todo: add easing -->
   <div
     v-show="loading"
-    class="va-p__loading"
+    class="va-absolute va-top-0 va-left-0 va-bottom-0 va-right-0 va-z-20 va-flex va-items-center va-justify-center va-bg-white va-bg-opacity-75"
   >
     <svg
       width="100"
@@ -105,18 +105,3 @@ export default {
   disableAxeAudit: true
 }
 </script>
-
-<style scoped>
-.va-p__loading {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(255, 255, 255, .8);
-}
-</style>

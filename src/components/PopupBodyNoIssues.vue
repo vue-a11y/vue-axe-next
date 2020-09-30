@@ -11,7 +11,3 @@ export default {
   disableAxeAudit: true
 }
 </script>
-
-<style scoped>
-
-</style>

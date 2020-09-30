@@ -1,13 +1,13 @@
 <template>
   <div
-    class="va-p"
+    class="va-popup va-fixed va-flex va-flex-wrap va-justify-end va-antialiased va-text-color"
     :dir="dir"
   >
     <transition name="scale">
       <div
         v-show="isOpen"
-        id="va-p-box"
-        class="va-p__box"
+        id="va-popup-box"
+        class="va-popup__box va-w-full va-rounded-lg va-mb-4 va-shadow-lg va-bg-main va-border va-border-solid va-border-gray-200 va-overflow-hidden"
       >
         <PopupHeader />
         <PopupBody />
@@ -70,60 +70,39 @@ export default {
 </script>
 
 <style>
-@import '../styles/vars.css';
-@import '../styles/utility.css';
+@import '../styles/base.css';
+@import '../styles/tailwind.css';
 
-.va-p * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-.va-p {
+.va-popup {
   font-family: var(--va-font-family);
-  position: fixed;
   z-index: 999;
   right: 20px;
   bottom: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
   max-width: 420px;
   margin-left: 20px;
-  -webkit-font-smoothing: antialiased;
 
   &__box {
-    width: 100%;
     min-width: 280px;
     transition: transform .3s ease-in-out, opacity .2s, visibility .2s;
     transform-origin: bottom right;
     transform: scale3d(1,1,1);
-    border-radius: 10px;
-    margin-bottom: 10px;
-    box-shadow: 2px 2px 4px #ccc;
-    background-color: var(--va-bg);
-    border: 1px solid var(--va-border-color);
-    overflow: hidden;
   }
 
   &[dir="ltr"] {
-    text-align: left;
+    @apply text-left;
   }
 
   &[dir="rtl"] {
+    @apply flex flex-wrap justify-end right-auto;
     left: 20px;
-    right: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
   }
 }
 
-.va-p[dir="rtl"] .va-p-box {
+.va-popup[dir="rtl"] .va-popup-box {
   transform-origin: bottom left;
 }
 
-.va-p__box {
+.va-popup__box {
   &.scale-enter-from, &.scale-leave-active {
     transform: scale3d(0,0,0);
   }
@@ -138,7 +117,7 @@ export default {
 }
 
 @media screen and (prefers-reduced-motion: reduce), (update: slow) {
-  .va-p * {
+  .va-popup * {
     animation-duration: 0.001ms !important;
     animation-iteration-count: 1 !important; /* Hat tip Nick/cssremedy (https://css-tricks.com/revisiting-prefers-reduced-motion-the-reduced-motion-media-query/#comment-1700170) */
     transition-duration: 0.001ms !important;
