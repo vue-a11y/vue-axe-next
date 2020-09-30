@@ -9,7 +9,7 @@
       :details="details"
       @hide-details="toogleDetails(null)"
     />
-    <PopupBodyNoIssues v-show="!results.issuesFound" />
+    <PopupBodyNoIssues v-if="!results.issuesFound && !details" />
   </div>
 </template>
 
