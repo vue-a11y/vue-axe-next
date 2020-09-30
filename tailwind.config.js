@@ -1,6 +1,17 @@
 module.exports = {
   prefix: 'va-',
-  purge: false,
+  purge: {
+    enabled: process.env.NODE_ENV === 'production',
+    options: {
+      whitelist: [
+        'va-text-critical',
+        'va-text-serious',
+        'va-text-moderate',
+        'va-text-minor'
+      ]
+    },
+    content: ['./src/**/*.vue']
+  },
   future: {
     purgeLayersByDefault: true,
     removeDeprecatedGapUtilities: true

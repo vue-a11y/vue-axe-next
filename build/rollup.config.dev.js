@@ -23,9 +23,7 @@ export default {
     ...defaultConfig.plugins.postcss,
     babel({
       ...defaultConfig.plugins.babel,
-      presets: [
-        ['@babel/preset-env']
-      ]
+      babelHelpers: 'runtime'
     }),
     commonjs()
   ],

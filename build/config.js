@@ -3,14 +3,6 @@ import alias from '@rollup/plugin-alias'
 import PostCSS from 'rollup-plugin-postcss'
 import resolve from '@rollup/plugin-node-resolve'
 
-const purgeConfig = {
-  safelist: {
-    deep: [/^va-/]
-  },
-  content: [path.resolve(__dirname, '../src/**/*.vue')],
-  defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || []
-}
-
 export default {
   entry: path.resolve(__dirname, '../src/index.js'),
   plugins: {
@@ -33,16 +25,14 @@ export default {
         plugins: [
           require('postcss-import'),
           require('postcss-nested'),
-          require('autoprefixer'),
           require('tailwindcss'),
-          process.env.NODE_ENV === 'production' && require('@fullhuman/postcss-purgecss')(purgeConfig)
+          require('autoprefixer')
         ]
       })
     ],
     babel: {
       exclude: 'node_modules/**',
-      extensions: ['.js', '.jsx', '.ts', '.tsx', '.vue'],
-      babelHelpers: 'bundled'
+      extensions: ['.js', '.jsx', '.ts', '.tsx', '.vue']
     }
   }
 }

@@ -27,6 +27,7 @@ export default commandLineArgs => {
       ...defaultConfig.plugins.postcss,
       babel({
         ...defaultConfig.plugins.babel,
+        babelHelpers: 'bundled',
         presets: [
           [
             '@babel/preset-env',
