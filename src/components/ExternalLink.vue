@@ -27,6 +27,8 @@
 
 <script>
 export default {
-  name: 'ExternalLink'
+  name: 'ExternalLink',
+
+  disableAxeAudit: true
 }
 </script>

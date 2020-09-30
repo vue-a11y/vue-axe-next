@@ -52,6 +52,8 @@
 
 <script>
 export default {
-  name: 'PopupBodyNoIssues'
+  name: 'PopupBodyNoIssues',
+
+  disableAxeAudit: true
 }
 </script>
