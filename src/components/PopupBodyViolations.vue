@@ -35,8 +35,8 @@
               </div>
               <button
                 type="button"
-                class="va-btn va-relative va-ml-2 va-pt-1 va-pb-2 va-px-3"
-                style="top: -2px"
+                class="va-btn va-relative va-pt-1 va-pb-2 va-px-3"
+                style="top: -2px; right: -6px;"
                 :aria-labelledby="`see-more-${violation.id} violation-${violation.id}`"
                 @click="$emit('show-details', violation)"
               >
