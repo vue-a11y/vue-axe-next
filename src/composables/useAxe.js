@@ -20,7 +20,6 @@ export default function useAxe (axeOptions) {
         results.value = {
           testEngine: res.testEngine,
           issuesFound: res.violations.length,
-          lastAudition: '5min', // use timeago
           impacts: violationsByImpacts(res.violations)
         }
         lastNotification = JSON.stringify([...res.violations]).length

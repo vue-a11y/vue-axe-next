@@ -1,9 +1,8 @@
 <template>
   <div class="va-bg-main">
     <PopupLoading v-show="loading" />
-    <div class="va-flex va-justify-between va-font-medium">
+    <div class="va-font-medium">
       <span>{{ results.issuesFound }} issue{{ results.issuesFound > 1 ? 's' : '' }} found</span>
-      <span>{{ results.lastAudition }}</span>
     </div>
     <ul class="va-mt-6">
       <li
