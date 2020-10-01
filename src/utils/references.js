@@ -17,7 +17,20 @@ export default {
   blink: [],
   'button-name': [],
   bypass: [],
-  'color-contrast': [],
+  'color-contrast': [
+    {
+      title: 'Colors with Good Contrast (w3.org)',
+      link: 'https://www.w3.org/WAI/perspective-videos/contrast/'
+    },
+    {
+      title: 'Contrast and Color Accessibility (WebAIM)',
+      link: 'https://webaim.org/articles/contrast/'
+    },
+    {
+      title: 'Color and contrast accessibility (web.dev)',
+      link: 'https://web.dev/color-and-contrast-accessibility/'
+    }
+  ],
   'definition-list': [],
   dlitem: [],
   'document-title': [],
