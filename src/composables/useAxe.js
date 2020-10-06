@@ -36,6 +36,7 @@ export default function useAxe (axeOptions) {
     runOptions = axeOptions.runOptions,
     force = false
   } = {}) {
+    loading.value = true
     if (force) resetLastNotification()
     nextTick(() => axeCoreRun(context, runOptions))
   }

@@ -1,6 +1,4 @@
 <template>
-  <!-- By Sam Herbert (@sherb), for everyone. More @ http://goo.gl/7AJzbL -->
-  <!-- Todo: add easing -->
   <div
     v-show="loading"
     class="va-absolute va-top-0 va-left-0 va-bottom-0 va-right-0 va-z-20 va-flex va-items-center va-justify-center va-bg-white va-bg-opacity-75"

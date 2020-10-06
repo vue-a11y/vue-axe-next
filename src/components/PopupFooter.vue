@@ -12,6 +12,9 @@
         height="14.2"
         focusable="false"
         aria-hidden="true"
+        :class="{
+          'va-animate-spin': loading
+        }"
       >
         <path
           d="M.9 0a.9.9 0 01.9.9v1.9A6.2 6.2 0 0112 5a.9.9 0 11-1.7.6 4.4 4.4 0 00-7.7-1.2h2.6a.9.9 0 110 1.8H1a.9.9 0 01-.9-.9V1A.9.9 0 01.9 0zm0 8a.9.9 0 011.1.6 4.4 4.4 0 007.8 1.2H7a.9.9 0 010-1.8h4.4a.9.9 0 011 .9v4.4a.9.9 0 11-1.8 0v-1.8A6.2 6.2 0 01.4 9.2.9.9 0 01.9 8z"
@@ -21,7 +24,9 @@
       <span
         id="va-btn-run-label"
         class="va-text-base va-font-medium va-ml-2"
-      >Run again</span>
+      >
+        {{ loading ? 'Running' : 'Run again' }}
+      </span>
     </button>
   </div>
 </template>
@@ -36,10 +41,11 @@ export default {
   disableAxeAudit: true,
 
   setup () {
-    const { run } = inject(vueAxe)
+    const { run, loading } = inject(vueAxe)
 
     return {
-      run
+      run,
+      loading
     }
   }
 }
