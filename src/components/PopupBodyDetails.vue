@@ -104,7 +104,6 @@ import ExternalLink from '@/components/ExternalLink'
 import IconArrowNarrow from '@/components/IconArrowNarrow'
 import referencesLinks from '@/utils/references'
 import prismjs from 'prismjs'
-import html from 'html'
 
 import { computed } from 'vue'
 
@@ -131,7 +130,7 @@ export default {
     const references = computed(() => referencesLinks[props.details.id])
 
     function getCodeBlock (source) {
-      return prismjs.highlight(html.prettyPrint(source, { indent_size: 2 }), prismjs.languages.markup, 'markup')
+      return prismjs.highlight(source, prismjs.languages.markup, 'markup')
     }
 
     return {

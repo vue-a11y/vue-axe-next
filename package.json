@@ -64,7 +64,6 @@
   },
   "homepage": "https://github.com/vue-a11y/vue-axe-next#readme",
   "dependencies": {
-    "html": "^1.0.0",
     "prismjs": "^1.21.0"
   },
   "devDependencies": {
