@@ -2,11 +2,11 @@ import useAxe from '@/composables/useAxe'
 import merge from 'deepmerge'
 import VueAxePopup from '@/components/Popup'
 
-import { debounce } from '@/utils'
 import { version } from '../../package.json'
 import { vueAxe, defaultOptions } from '@/utils/constants'
 
 export default function useVueAxe (options) {
+  let timeout = null
   const axeOptions = merge(defaultOptions, options)
   const axe = useAxe(axeOptions)
 
@@ -23,8 +23,8 @@ export default function useVueAxe (options) {
         updated () {
           if (this.$.type.disableAxeAudit || this.$.type.name.toLowerCase().indexOf('transition') !== -1) return
           axe.loading.value = true
-          const run = debounce(axe.run, 2500)
-          run()
+          clearTimeout(timeout)
+          timeout = setTimeout(axe.run, 2500)
         }
       })
     }
