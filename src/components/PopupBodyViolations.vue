@@ -26,7 +26,7 @@
               <div class="va-flex va-items-start">
                 <span :class="`va-text-${violation.impact} va-text-2xl va-font-bold va-leading-4 va-mr-2`">&#8226;</span>
                 <span :id="`violation-${violation.id}`">
-                  {{ violation.description }}.
+                  {{ violation.help }}.
                   <em v-show="violation.nodes.length > 1">
                     ({{ `${violation.nodes.length}` }} elements)
                   </em>
@@ -43,7 +43,7 @@
                   :id="`see-more-${violation.id}`"
                   class="va-sr-only"
                 >See more</span>
-                <IconArrowNarrow />
+                <IconArrowNarrow right />
               </button>
             </WrapperCard>
           </ul>
