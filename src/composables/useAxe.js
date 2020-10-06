@@ -42,6 +42,7 @@ export default function useAxe (axeOptions) {
 
   function violationsByImpacts (violations) {
     return violations.reduce((obj, data) => {
+      data = { ...data, failureSummary: getFailureSummaries(data) }
       impacts.forEach(impact => {
         if (!obj[impact]) {
           obj[impact] = []
@@ -50,6 +51,19 @@ export default function useAxe (axeOptions) {
       })
       return obj
     }, {})
+  }
+
+  function getFailureSummaries (data) {
+    const keys = ['all', 'any', 'none']
+    const failures = []
+
+    keys.forEach(key => {
+      data.nodes.forEach(node => {
+        node[key].length && failures.push({ errors: node[key], source: node.html })
+      })
+    })
+
+    return failures
   }
 
   function resetLastNotification () {
