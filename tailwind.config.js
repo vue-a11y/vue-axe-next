@@ -8,6 +8,9 @@ module.exports = {
         'va-text-serious',
         'va-text-moderate',
         'va-text-minor'
+      ],
+      whitelistPatternsChildren: [
+        /va-code-block$/
       ]
     },
     content: ['./src/**/*.vue']
