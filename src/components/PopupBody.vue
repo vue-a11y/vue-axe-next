@@ -17,9 +17,9 @@
 import { inject, ref } from 'vue'
 import { vueAxe } from '@/utils/constants'
 
-import PopupBodyViolations from '@/components/PopupBodyViolations'
 import PopupBodyDetails from '@/components/PopupBodyDetails'
 import PopupBodyNoIssues from '@/components/PopupBodyNoIssues'
+import PopupBodyViolations from '@/components/PopupBodyViolations'
 
 export default {
   name: 'PopupBody',
@@ -27,9 +27,9 @@ export default {
   disableAxeAudit: true,
 
   components: {
-    PopupBodyViolations,
     PopupBodyDetails,
-    PopupBodyNoIssues
+    PopupBodyNoIssues,
+    PopupBodyViolations
   },
 
   setup () {

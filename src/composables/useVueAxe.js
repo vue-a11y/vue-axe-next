@@ -2,11 +2,13 @@ import useAxe from '@/composables/useAxe'
 import merge from 'deepmerge'
 import VueAxePopup from '@/components/Popup'
 
+import { ref } from 'vue'
 import { version } from '../../package.json'
 import { vueAxe, defaultOptions } from '@/utils/constants'
 
 export default function useVueAxe (options) {
   let timeout = null
+  const highlights = ref(null)
   const axeOptions = merge(defaultOptions, options)
   const axe = useAxe(axeOptions)
 
@@ -15,7 +17,8 @@ export default function useVueAxe (options) {
 
     app.provide(vueAxe, {
       ...axe,
-      version
+      version,
+      highlights
     })
 
     if (axeOptions.auto) {

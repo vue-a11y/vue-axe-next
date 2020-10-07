@@ -7,15 +7,45 @@
       <button
         type="button"
         class="va-btn va-flex va-items-center va-px-2 va-py-3 va-relative"
-        style="left: -0.5rem;"
         @click="$emit('hide-details')"
       >
         <IconArrowNarrow />
         <span class="va-ml-2 va-text-base va-font-medium va-leading-3">Back</span>
       </button>
-      <span :class="`va-font-medium va-capitalize va-text-${details.impact}`">
-        {{ details.impact }}
-      </span>
+      <button
+        type="button"
+        class="va-btn va-flex va-items-center va-px-2 va-py-3 va-relative"
+        @click="toggleHighlight(details.nodes)"
+      >
+        <svg
+          class="va-w-4 va-h-4 va-text-color"
+          fill="currentColor"
+          focusable="false"
+          aria-hidden="true"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g v-if="highlights">
+            <path
+              fill-rule="evenodd"
+              d="M3.7 2.3a1 1 0 00-1.4 1.4l14 14a1 1 0 001.4-1.4l-1.5-1.5a10 10 0 003.3-4.8c-1.2-4-5-7-9.5-7a10 10 0 00-4.5 1L3.7 2.4zM8 6.6L9.5 8a2 2 0 012.4 2.4l1.5 1.5A4 4 0 008 6.6z"
+              clip-rule="evenodd"
+            />
+            <path d="M12.5 16.7L9.7 14A4 4 0 016 10.3L2.3 6.6A10 10 0 00.5 10a10 10 0 0012 6.7z" />
+          </g>
+          <g v-else>
+            <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
+            <path
+              fill-rule="evenodd"
+              d="M.5 10a10 10 0 0119 0 10 10 0 01-19 0zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
+              clip-rule="evenodd"
+            />
+          </g>
+        </svg>
+        <span class="va-ml-2 va-text-base va-font-medium va-leading-3">
+          {{ highlights ? 'Stop highlight' : 'Highlight' }}
+        </span>
+      </button>
     </div>
     <section :aria-labelledby="`issue-desc-${details.id}`">
       <h2
@@ -103,6 +133,7 @@
 import ExternalLink from '@/components/ExternalLink'
 import IconArrowNarrow from '@/components/IconArrowNarrow'
 import referencesLinks from '@/utils/references'
+import useHighlight from '@/composables/useHighlight'
 import prismjs from 'prismjs'
 
 import { computed } from 'vue'
@@ -127,6 +158,7 @@ export default {
   disableAxeAudit: true,
 
   setup (props) {
+    const { highlights, toggleHighlight } = useHighlight()
     const references = computed(() => referencesLinks[props.details.id])
 
     function getCodeBlock (source) {
@@ -135,7 +167,9 @@ export default {
 
     return {
       references,
-      getCodeBlock
+      highlights,
+      getCodeBlock,
+      toggleHighlight
     }
   }
 }

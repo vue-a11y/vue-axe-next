@@ -1,11 +1,12 @@
 <template>
   <div
     class="va-popup va-fixed va-flex va-flex-wrap va-justify-end va-antialiased va-text-color"
+    style="z-index: 10000"
     :dir="dir"
   >
     <transition name="scale">
       <div
-        v-show="isOpen"
+        v-show="true"
         id="va-popup-box"
         class="va-popup__box va-w-full va-rounded-lg va-mb-4 va-shadow-lg va-bg-main va-border va-border-solid va-border-gray-200 va-overflow-hidden"
       >
@@ -20,6 +21,7 @@
       @toggle-popup="togglePopup"
     />
   </div>
+  <Highlight />
 </template>
 
 <script>
@@ -27,9 +29,10 @@ import { computed, inject } from 'vue'
 import useDisclosure from '@/composables/useDisclosure'
 import { vueAxe } from '@/utils/constants'
 
+import PopupBody from '@/components/PopupBody'
+import Highlight from '@/components/Highlight'
 import PopupButton from '@/components/PopupButton'
 import PopupHeader from '@/components/PopupHeader'
-import PopupBody from '@/components/PopupBody'
 import PopupFooter from '@/components/PopupFooter'
 
 export default {
@@ -38,8 +41,9 @@ export default {
   disableAxeAudit: true,
 
   components: {
-    PopupHeader,
+    Highlight,
     PopupBody,
+    PopupHeader,
     PopupFooter,
     PopupButton
   },
