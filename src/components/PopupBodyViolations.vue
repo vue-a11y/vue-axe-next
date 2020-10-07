@@ -1,6 +1,5 @@
 <template>
   <div class="va-bg-main">
-    <PopupLoading v-show="loading" />
     <div class="va-font-medium">
       <span>{{ results.issuesFound }} issue{{ results.issuesFound > 1 ? 's' : '' }} found</span>
     </div>
@@ -58,7 +57,6 @@ import { inject } from 'vue'
 import { vueAxe } from '@/utils/constants'
 
 import WrapperCard from '@/components/WrapperCard'
-import PopupLoading from '@/components/PopupLoading'
 import IconArrowNarrow from '@/components/IconArrowNarrow'
 
 export default {
@@ -66,7 +64,6 @@ export default {
 
   components: {
     WrapperCard,
-    PopupLoading,
     IconArrowNarrow
   },
 
@@ -75,10 +72,9 @@ export default {
   disableAxeAudit: true,
 
   setup () {
-    const { loading, results } = inject(vueAxe)
+    const { results } = inject(vueAxe)
 
     return {
-      loading,
       results
     }
   }

@@ -10,6 +10,7 @@
       @hide-details="toogleDetails(null)"
     />
     <PopupBodyNoIssues v-if="!results.issuesFound && !details" />
+    <PopupLoading v-show="loading" />
   </div>
 </template>
 
@@ -17,6 +18,7 @@
 import { inject, ref } from 'vue'
 import { vueAxe } from '@/utils/constants'
 
+import PopupLoading from '@/components/PopupLoading'
 import PopupBodyDetails from '@/components/PopupBodyDetails'
 import PopupBodyNoIssues from '@/components/PopupBodyNoIssues'
 import PopupBodyViolations from '@/components/PopupBodyViolations'
@@ -27,13 +29,14 @@ export default {
   disableAxeAudit: true,
 
   components: {
+    PopupLoading,
     PopupBodyDetails,
     PopupBodyNoIssues,
     PopupBodyViolations
   },
 
   setup () {
-    const { results } = inject(vueAxe)
+    const { loading, results } = inject(vueAxe)
     const details = ref(null)
 
     function toogleDetails (violation) {
@@ -41,6 +44,7 @@ export default {
     }
 
     return {
+      loading,
       details,
       results,
       toogleDetails
