@@ -1,5 +1,5 @@
 <template>
-  <div class="va-popup__body va-relative va-z-10 va-p-5 va-overflow-y-auto va-overflow-x-hidden">
+  <div class="va-popup__body va-relative va-z-10 va-overflow-y-auto va-overflow-x-hidden">
     <PopupBodyViolations
       v-if="results.issuesFound && !details"
       @show-details="toogleDetails"

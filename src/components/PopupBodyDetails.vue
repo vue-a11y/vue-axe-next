@@ -1,8 +1,8 @@
 <template>
-  <div class="va-details">
+  <div class="va-details va-p-5">
     <div
-      class="va-flex va-justify-between va-items-center va-relative"
-      style="top: -0.75rem;"
+      class="va-flex va-justify-between va-items-center va-sticky va-bg-main va--mt-5 va-py-3"
+      style="top: 0;"
     >
       <button
         type="button"

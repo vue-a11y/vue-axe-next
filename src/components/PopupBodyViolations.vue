@@ -1,5 +1,5 @@
 <template>
-  <div class="va-bg-main">
+  <div class="va-bg-main va-p-5">
     <div class="va-font-medium">
       <span>{{ results.issuesFound }} issue{{ results.issuesFound > 1 ? 's' : '' }} found</span>
     </div>
