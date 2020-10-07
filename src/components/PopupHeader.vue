@@ -32,8 +32,8 @@
       </svg>
     </a>
     <div class="va-text-right va-text-sm va-font-medium">
-      <span>{{ versions.vueAxe }} (vue-axe)</span> <br>
-      <span>{{ versions.axeCore }} (axe-core) </span>
+      <span>v{{ versions.vueAxe }} (vue-axe)</span> <br>
+      <span>v{{ versions.axeCore }} (axe-core) </span>
     </div>
   </div>
 </template>
