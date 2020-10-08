@@ -1,2 +1,2 @@
 # vue-axe-next
-[WIP] Accessibility auditing for Vue.js applications for Vue 3
+[WIP] Dynamic accessibility analysis for Vue.js 3 using axe-core
