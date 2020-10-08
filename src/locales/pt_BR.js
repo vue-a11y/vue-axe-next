@@ -24,5 +24,8 @@ export default {
   serious: 'Importante',
   moderate: 'Moderado',
   minor: 'Leve',
-  els: 'Elementos'
+  els: 'Elementos',
+  details: 'Detalhes',
+  announcer_details_view: 'Detalhes da violação foi carregado',
+  announcer_violations_view: 'Lista de violações foi carregada'
 }

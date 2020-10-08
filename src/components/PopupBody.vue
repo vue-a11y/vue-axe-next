@@ -11,6 +11,12 @@
     />
     <PopupBodyNoIssues v-if="!results.issuesFound && !details" />
     <PopupLoading v-show="loading" />
+    <span
+      class="va-sr-only"
+      aria-live="polite"
+    >
+      {{ details ? $vat('announcer_details_view') : $vat('announcer_violations_view') }}
+    </span>
   </div>
 </template>
 
