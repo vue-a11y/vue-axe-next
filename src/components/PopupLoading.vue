@@ -1,8 +1,5 @@
 <template>
-  <div
-    v-show="loading"
-    class="va-absolute va-top-0 va-left-0 va-bottom-0 va-right-0 va-z-20 va-flex va-items-center va-justify-center va-bg-white va-bg-opacity-75"
-  >
+  <div class="va-absolute va-top-0 va-left-0 va-bottom-0 va-right-0 va-z-20 va-flex va-items-center va-justify-center va-bg-white va-bg-opacity-75">
     <svg
       width="100"
       height="100"

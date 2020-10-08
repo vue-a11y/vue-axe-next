@@ -10,7 +10,7 @@
         @click="$emit('hide-details')"
       >
         <IconArrowNarrow />
-        <span class="va-ml-2 va-text-base va-font-medium va-leading-3">Back</span>
+        <span class="va-ml-2 va-text-base va-font-medium va-leading-3">{{ $vat('back', 'Back') }}</span>
       </button>
       <button
         type="button"
@@ -43,7 +43,7 @@
           </g>
         </svg>
         <span class="va-ml-2 va-text-base va-font-medium va-leading-3">
-          {{ highlights ? 'Stop highlight' : 'Highlight' }}
+          {{ highlights ? $vat('no_highlight', 'Stop highlight') : $vat('highlight', 'Highlight') }}
         </span>
       </button>
     </div>
@@ -52,7 +52,7 @@
         :id="`issue-desc-${details.id}`"
         class="va-p-item__header va-bg-primary va-flex va-justify-between va-font-medium va-p-3 va-border va-border-solid va-border-gray-300 va-text-base"
       >
-        Issue description
+        {{ $vat('issue_desc', 'Issue description') }}
       </h2>
       <p class="va-p-3">
         {{ details.description }}
@@ -62,7 +62,7 @@
           :aria-labelledby="`more-${details.id} issue-desc-${details.id}`"
           style="margin-left: -0.25rem;"
         >
-          <span :id="`more-${details.id}`">Learn more</span>
+          <span :id="`more-${details.id}`">{{ $vat('learn_more', 'Learn more') }}</span>
         </ExternalLink>
       </p>
     </section>
@@ -73,7 +73,7 @@
     >
       <div class="va-w-full va-flex va-items-center va-justify-between">
         <h2 class="va-font-medium va-text-base">
-          Element source
+          {{ $vat('el_src', 'Element source') }}
         </h2>
         <div class="va-flex va-items-center">
           <span class="va-mx-1 va-font-medium va-text-sm">
@@ -89,7 +89,7 @@
       </div>
       <div class="va-w-full va-mt-2">
         <h3 class="va-font-medium va-text-base">
-          {{ failure.errors.length > 1 ? 'Fix any of the following' : 'Fix the following' }}:
+          {{ failure.errors.length > 1 ? $vat('fixes') : $vat('fix') }}:
         </h3>
         <ul class="va-mt-2">
           <li
@@ -111,7 +111,7 @@
         :id="`references-${details.id}`"
         class="va-p-item__header va-bg-primary va-flex va-justify-between va-font-medium va-p-3 va-border va-border-solid va-border-gray-300 va-text-base"
       >
-        More links
+        {{ $vat('more_links', 'More links') }}
       </h2>
       <ul class="va-p-3 va-pt-2">
         <li

@@ -1,7 +1,6 @@
 <template>
   <button
     class="va-btn va-popup-btn va-w-16 va-h-16 va-relative va-outline-none va-bg-main va-text-color va-border-0 va-rounded-full va-inline-block va-pt-1"
-    :data-notifications="notifications"
     aria-haspopup="true"
     aria-controls="va-popup-box"
     :aria-expanded="popupShow.toString()"
@@ -14,7 +13,10 @@
       aria-live="assertive"
       aria-atomic="true"
     >
-      {{ notifications }} <span class="va-sr-only">accessibility issue found</span>
+      {{ notifications }}
+      <span class="va-sr-only">
+        {{ Number(notifications) > 1 ? $vat('btn_label_plu') : $vat('btn_label') }}
+      </span>
     </span>
     <svg
       v-show="!popupShow"

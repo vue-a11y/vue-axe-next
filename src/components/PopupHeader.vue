@@ -13,7 +13,7 @@
         width="46"
         height="45.3"
       >
-        <title id="va-logo-title">Vue axe (opens in a new window)</title>
+        <title id="va-logo-title">Vue aXe ({{ $vat('open_new_tab') }})</title>
         <path
           d="M34.4 42h-32L0 38.3 22.6 0l17.2 29.3H33L22.5 13V1.3v14.5L7.8 36.4h26.6a6.1 6.1 0 015.5-3.4 6.1 6.1 0 016.1 6.1 6.1 6.1 0 01-6.1 6.2 6.1 6.1 0 01-5.5-3.4zm2.4-2.9a3 3 0 003 3.1 3 3 0 003.1-3 3 3 0 00-3-3.1 3 3 0 00-3.1 3z"
           fill="#3ab982"

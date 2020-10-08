@@ -5,7 +5,8 @@ export const defaultOptions = {
   config: {
     branding: {
       application: 'vue-axe'
-    }
+    },
+    locale: null
   },
   runOptions: {
     reporter: 'v2',

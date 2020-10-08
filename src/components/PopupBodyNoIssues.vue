@@ -4,10 +4,10 @@
       id="congratulation-title"
       class="va-text-xl va-uppercase va-text-green-800 va-text-center va-mt-3"
     >
-      Congratulation
+      {{ $vat('congrats', 'Congratulation') }}
     </h2>
     <p class="va-text-center va-mt-4">
-      (0) issues found on this page
+      (0) {{ $vat('no_issues') }}
     </p>
     <div class="va-flex va-flex-wrap va-items-center va-justify-center va-my-4 va-pt-4">
       <svg

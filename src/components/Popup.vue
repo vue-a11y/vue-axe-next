@@ -6,7 +6,7 @@
   >
     <transition name="scale">
       <div
-        v-show="true"
+        v-show="isOpen"
         id="va-popup-box"
         class="va-popup__box va-w-full va-rounded-lg va-mb-4 va-shadow-lg va-bg-main va-border va-border-solid va-border-gray-200 va-overflow-hidden"
       >

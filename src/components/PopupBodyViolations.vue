@@ -1,7 +1,10 @@
 <template>
   <div class="va-bg-main va-p-5">
     <div class="va-font-medium">
-      <span>{{ results.issuesFound }} issue{{ results.issuesFound > 1 ? 's' : '' }} found</span>
+      <span>
+        {{ results.issuesFound }}
+        {{ results.issuesFound > 1 ? $vat('issues_found', 'issues found') : $vat('issue_found', 'issue found') }}
+      </span>
     </div>
     <ul class="va-mt-6">
       <li
@@ -11,8 +14,11 @@
       >
         <template v-if="result.length">
           <div class="va-p-item__header va-bg-primary va-flex va-justify-between va-font-medium va-p-3 va-border va-border-solid va-border-gray-300">
-            <span :class="`va-capitalize va-text-${key}`">{{ key }}</span>
-            <span>{{ result.length }} issues</span>
+            <span :class="`va-capitalize va-text-${key}`">{{ $vat(key, key) }}</span>
+            <span>
+              {{ result.length }}
+              {{ result.length > 1 ? $vat('issues', 'issues') : $vat('issue', 'issue') }}
+            </span>
           </div>
           <ul class="va-mt-2">
             <WrapperCard
@@ -27,7 +33,7 @@
                 <span :id="`violation-${violation.id}`">
                   {{ violation.help }}.
                   <em v-show="violation.nodes.length > 1">
-                    ({{ `${violation.nodes.length}` }} elements)
+                    ({{ `${violation.nodes.length}` }} {{ $vat('els', 'elements') }})
                   </em>
                 </span>
               </div>
@@ -41,7 +47,9 @@
                 <span
                   :id="`see-more-${violation.id}`"
                   class="va-sr-only"
-                >See more</span>
+                >
+                  {{ $vat('see_more', 'See more') }}
+                </span>
                 <IconArrowNarrow right />
               </button>
             </WrapperCard>

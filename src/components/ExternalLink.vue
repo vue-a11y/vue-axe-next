@@ -5,7 +5,7 @@
     class="va-inline-flex va-py-2 va-px-1 va-items-center va-text-blue-700 va-no-underline va-font-medium hover:va-underline"
   >
     <slot />
-    <span class="va-sr-only">(Opens a new tab)</span>
+    <span class="va-sr-only">({{ $vat('open_new_tab') }})</span>
     <svg
       class="va-ml-1"
       fill="none"

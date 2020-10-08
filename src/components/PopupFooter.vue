@@ -25,7 +25,7 @@
         id="va-btn-run-label"
         class="va-text-base va-font-medium va-ml-2"
       >
-        {{ loading ? 'Running' : 'Run again' }}
+        {{ loading ? $vat('running', 'Running') : $vat('run_again', 'Run again') }}
       </span>
     </button>
   </div>
