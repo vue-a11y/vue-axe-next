@@ -29,7 +29,7 @@ export default function useVueAxe (options) {
     if (axeOptions.auto) {
       app.mixin({
         updated () {
-          if (this.$.type.disableAxeAudit || this.$.type.name.toLowerCase().indexOf('transition') !== -1) return
+          if (this.$.type.disableAxeAudit || (this.$.type.name && this.$.type.name.toLowerCase().indexOf('transition') !== -1)) return
           axe.loading.value = true
           clearTimeout(timeout)
           timeout = setTimeout(axe.run, 2500)
