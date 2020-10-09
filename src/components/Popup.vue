@@ -2,6 +2,7 @@
   <div
     class="va-popup va-fixed va-flex va-flex-wrap va-justify-end va-antialiased va-text-color"
     style="z-index: 10000"
+    role="region"
     :dir="dir"
   >
     <transition name="scale">
