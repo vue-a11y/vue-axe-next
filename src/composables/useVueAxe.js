@@ -1,5 +1,4 @@
 import merge from 'deepmerge'
-import VueAxePopup from '@/components/Popup'
 
 import useAxe from '@/composables/useAxe'
 import useLocale from '@/composables/useLocale'
@@ -16,8 +15,6 @@ export default function useVueAxe (options) {
   const { $t } = useLocale(axeOptions.config.locale && axeOptions.config.locale.lang)
 
   function registerPlugin (app) {
-    app.component('VueAxePopup', VueAxePopup)
-
     app.config.globalProperties.$vat = $t
 
     app.provide(vueAxe, {
