@@ -3,7 +3,7 @@
   <img src="vue-axe.svg" alt="Vue Axe logo">
 </p>
 
-## vue-axe (WIP)
+## vue-axe
 Accessibility auditing for Vue.js 3 applications by running [dequelabs/axe-core](https://github.com/dequelabs/axe-core/) validation on the page you're viewing.
 
 **NOTE: It is still a beta version. You can create an [issue](https://github.com/vue-a11y/vue-axe-next/issues) if you encounter any errors or want to add some functionality.**
