@@ -98,11 +98,11 @@ export default {
   }
 
   &[dir="ltr"] {
-    @apply text-left;
+    @apply va-text-left;
   }
 
   &[dir="rtl"] {
-    @apply flex flex-wrap justify-end right-auto;
+    @apply va-flex va-flex-wrap va-justify-end va-right-auto;
     left: 20px;
   }
 }
