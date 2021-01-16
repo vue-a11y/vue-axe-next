@@ -1,4 +1,4 @@
-import merge from 'deepmerge'
+import merge from 'merge'
 
 import useAxe from '@/composables/useAxe'
 import useLocale from '@/composables/useLocale'
