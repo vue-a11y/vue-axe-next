@@ -3,10 +3,8 @@
   <img src="vue-axe.svg" alt="Vue Axe logo">
 </p>
 
-## vue-axe
+## [@vue-a11y/axe](https://github.com/vue-a11y/vue-axe)
 Accessibility auditing for Vue.js 3 applications by running [dequelabs/axe-core](https://github.com/dequelabs/axe-core/) validation on the page you're viewing.
-
-**NOTE: It is still a beta version. You can create an [issue](https://github.com/vue-a11y/vue-axe-next/issues) if you encounter any errors or want to add some functionality.**
 
 - [Links](#links)
 - [Setup](#setup)
@@ -18,9 +16,9 @@ Accessibility auditing for Vue.js 3 applications by running [dequelabs/axe-core]
 
 ## Setup
 ```shell
-npm install -D axe-core vue-axe@3.0.0-beta.3
+npm install -D axe-core @vue-a11y/axe
 # or
-yarn add -D axe-core vue-axe@3.0.0-beta.3
+yarn add -D axe-core @vue-a11y/axe
 ```
 
 ### Vue CLI
@@ -31,7 +29,7 @@ import App from './App.vue'
 let app = null
 
 if (process.env.NODE_ENV === 'development') {
-  const VueAxe = require('vue-axe')
+  const VueAxe = require('@vue-a11y/axe')
   app = createApp({
     render: () => h('div', {}, [h(App), h(VueAxe.VueAxePopup)])
   })
