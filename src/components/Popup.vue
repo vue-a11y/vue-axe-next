@@ -30,6 +30,7 @@
 <script>
 import { computed, inject } from 'vue'
 import useDisclosure from '@/composables/useDisclosure'
+import useEventListener from '@/composables/useEventListener'
 import { vueAxe } from '@/utils/constants'
 
 import PopupBody from '@/components/PopupBody'
@@ -62,12 +63,14 @@ export default {
 
   setup () {
     const { results } = inject(vueAxe)
-    const { isOpen, toggle: togglePopup } = useDisclosure()
+    const { isOpen, onClose, toggle: togglePopup } = useDisclosure()
 
     const issuesFound = computed(() => {
       if (!results.value.issuesFound) return 0
       return results.value.issuesFound
     })
+
+    useEventListener('keydown', e => (e.key === 'Escape' && isOpen.value) && onClose())
 
     return {
       isOpen,
