@@ -5,7 +5,7 @@
     aria-controls="va-popup-box"
     :aria-expanded="popupShow.toString()"
     :aria-label="ariaLabelButton"
-    @click="$emit('toggle-popup')"
+    @click="$emit('togglePopup')"
   >
     <span
       v-show="notifications && !popupShow"
@@ -67,7 +67,7 @@ export default {
     }
   },
 
-  emits: ['toggle-popup'],
+  emits: ['togglePopup'],
 
   disableAxeAudit: true,
 

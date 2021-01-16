@@ -7,7 +7,7 @@
       <button
         type="button"
         class="va-btn va-flex va-items-center va-px-2 va-py-3 va-relative"
-        @click="$emit('hide-details')"
+        @click="$emit('hideDetails')"
       >
         <IconArrowNarrow />
         <span class="va-ml-2 va-text-base va-font-medium va-leading-3">{{ $vat('back', 'Back') }}</span>
@@ -153,7 +153,7 @@ export default {
     }
   },
 
-  emits: ['hide-details'],
+  emits: ['hideDetails'],
 
   disableAxeAudit: true,
 
