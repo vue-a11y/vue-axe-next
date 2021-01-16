@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0](https://github.com/vue-a11y/vue-axe-next/compare/v3.0.0-beta.3...v3.0.0) (2021-01-16)
+
+
+### Features
+
+* Add FocusLoop ([99abfdf](https://github.com/vue-a11y/vue-axe-next/commit/99abfdf8c8c10650d098d93c1d1ee6b0f26efdaa))
+
 ## [3.0.0-beta.3](https://github.com/vue-a11y/vue-axe-next/compare/v3.0.0-beta.1...v3.0.0-beta.3) (2020-10-09)
 
 
