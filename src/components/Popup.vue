@@ -1,27 +1,29 @@
 <template>
-  <div
-    class="va-popup va-fixed va-flex va-flex-wrap va-justify-end va-antialiased va-text-color"
-    style="z-index: 10000"
-    role="region"
-    :dir="dir"
-  >
-    <transition name="scale">
-      <div
-        v-show="isOpen"
-        id="va-popup-box"
-        class="va-popup__box va-w-full va-rounded-lg va-mb-4 va-shadow-lg va-bg-main va-border va-border-solid va-border-gray-200 va-overflow-hidden"
-      >
-        <PopupHeader />
-        <PopupBody />
-        <PopupFooter />
-      </div>
-    </transition>
-    <PopupButton
-      :popup-show="isOpen"
-      :notifications="issuesFound"
-      @toggle-popup="togglePopup"
-    />
-  </div>
+  <FocusLoop>
+    <div
+      class="va-popup va-fixed va-flex va-flex-wrap va-justify-end va-antialiased va-text-color"
+      style="z-index: 10000"
+      role="region"
+      :dir="dir"
+    >
+      <transition name="scale">
+        <div
+          v-show="isOpen"
+          id="va-popup-box"
+          class="va-popup__box va-w-full va-rounded-lg va-mb-4 va-shadow-lg va-bg-main va-border va-border-solid va-border-gray-200 va-overflow-hidden"
+        >
+          <PopupHeader />
+          <PopupBody />
+          <PopupFooter />
+        </div>
+      </transition>
+      <PopupButton
+        :popup-show="isOpen"
+        :notifications="issuesFound"
+        @toggle-popup="togglePopup"
+      />
+    </div>
+  </FocusLoop>
   <Highlight />
 </template>
 
@@ -35,6 +37,7 @@ import Highlight from '@/components/Highlight'
 import PopupButton from '@/components/PopupButton'
 import PopupHeader from '@/components/PopupHeader'
 import PopupFooter from '@/components/PopupFooter'
+import FocusLoop from '@/components/FocusLoop'
 
 export default {
   name: 'Popup',
@@ -42,6 +45,7 @@ export default {
   disableAxeAudit: true,
 
   components: {
+    FocusLoop,
     Highlight,
     PopupBody,
     PopupHeader,
