@@ -21,7 +21,7 @@ npm install -D axe-core vue-axe@next
 yarn add -D axe-core vue-axe@next
 ```
 
-### Vue CLI
+### main.js
 ```js
 import { createApp, h } from 'vue'
 import App from './App.vue'
@@ -39,6 +39,23 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 app.mount('#app')
+```
+
+## Vite
+
+In Vite you need to add `axe-core` in the dependency optimization option (optimizeDeps).
+
+In your `vite.config.js`
+
+```js
+import vue from '@vitejs/plugin-vue'
+
+export default {
+  plugins: [vue()],
+  optimizeDeps: {
+    include: ['axe-core']
+  }
+}
 ```
 
 ## Options
@@ -103,6 +120,21 @@ app.use(VueAxe, {
   }
 })
 ```
+
+## Roadmap
+
+- [x] Enable highlighting of elements with errors on the page;
+- [x] i18n;
+- [x] Announce "views" changes to the screen reader;
+- [x] New documentation;
+- [x] Add focus trap in the popup;
+- [x] How to use (Vite)
+- [x] Add links (references file) to learn more;
+- [ ] Typescript support;
+- [ ] Add keyboard shortcut to open pop-up;
+- [ ] Animation slide-right (to details view) & slide-left (to violations view);
+- [ ] Carousel to element source when greater than 3;
+- [ ] Export violations (Output format to be defined);
 
 ## Contributing
 - From typos in documentation to coding new features;
