@@ -1,6 +1,6 @@
 {
   "name": "@vue-a11y/axe",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "Dynamic accessibility analysis for Vue.js 3 using axe-core",
   "main": "dist/vue-axe.ssr.js",
   "browser": "dist/vue-axe.esm.js",
@@ -18,8 +18,7 @@
     "demo:cli": "cd demo-cli && npm run serve",
     "demo:vite": "cd demo-vite && npm run dev",
     "release": "standard-version",
-    "release:beta": "standard-version -p beta -r minor",
-    "project:publish": "git push --tags origin master && npm run build && npm publish"
+    "project:publish": "git push --tags origin master && npm run build && npm publish --tag next"
   },
   "repository": {
     "type": "git",

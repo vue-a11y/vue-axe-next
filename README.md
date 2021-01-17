@@ -16,9 +16,9 @@ Accessibility auditing for Vue.js 3 applications by running [dequelabs/axe-core]
 
 ## Setup
 ```shell
-npm install -D axe-core @vue-a11y/axe
+npm install -D axe-core vue-axe@next
 # or
-yarn add -D axe-core @vue-a11y/axe
+yarn add -D axe-core vue-axe@next
 ```
 
 ### Vue CLI
@@ -29,7 +29,7 @@ import App from './App.vue'
 let app = null
 
 if (process.env.NODE_ENV === 'development') {
-  const VueAxe = require('@vue-a11y/axe')
+  const VueAxe = require('vue-axe')
   app = createApp({
     render: () => h('div', {}, [h(App), h(VueAxe.VueAxePopup)])
   })
