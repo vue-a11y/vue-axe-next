@@ -129,7 +129,7 @@ app.use(VueAxe, {
 - [x] New documentation;
 - [x] Add focus trap in the popup;
 - [x] How to use (Vite)
-- [x] Add links (references file) to learn more;
+- [ ] Add links (references file) to learn more;
 - [ ] Typescript support;
 - [ ] Add keyboard shortcut to open pop-up;
 - [ ] Animation slide-right (to details view) & slide-left (to violations view);
