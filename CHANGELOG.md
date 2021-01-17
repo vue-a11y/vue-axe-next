@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.1.1](https://github.com/vue-a11y/vue-axe-next/compare/v3.0.0...v3.1.1) (2021-01-17)
+
+
+### Features
+
+* Escape to close the Popup ([794907c](https://github.com/vue-a11y/vue-axe-next/commit/794907c826eef6e418b23dfb1bb3c9bbf75497fb))
+
+
+### Bug Fixes
+
+* Change from deepmerge to merge ([8e2bc46](https://github.com/vue-a11y/vue-axe-next/commit/8e2bc46577be261952c4b9f9930c9d3150bac515))
+* Use camelCase in emits ([064fc94](https://github.com/vue-a11y/vue-axe-next/commit/064fc94e1f0c397aafd1aba514c7d708dc21ebc3))
+* Use prefix when [@apply](https://github.com/apply) class ([b5fd338](https://github.com/vue-a11y/vue-axe-next/commit/b5fd338ada3d31672cae54ce5f2d022c1e7afeee))
+
 ## [3.1.0](https://github.com/vue-a11y/vue-axe-next/compare/v3.0.0...v3.1.0) (2021-01-17)
 
 
