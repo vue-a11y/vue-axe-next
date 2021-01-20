@@ -3,15 +3,17 @@ module.exports = {
   purge: {
     enabled: process.env.NODE_ENV === 'production',
     options: {
-      whitelist: [
-        'va-text-critical',
-        'va-text-serious',
-        'va-text-moderate',
-        'va-text-minor'
-      ],
-      whitelistPatternsChildren: [
-        /va-code-block$/
-      ]
+      safelist: {
+        standard: [
+          'va-text-critical',
+          'va-text-serious',
+          'va-text-moderate',
+          'va-text-minor'
+        ],
+        deep: [
+          /va-code-block$/
+        ]
+      }
     },
     content: ['./src/**/*.vue']
   },
