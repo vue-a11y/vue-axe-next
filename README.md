@@ -23,7 +23,7 @@ yarn add -D axe-core vue-axe@next
 
 ### main.js
 ```js
-import { createApp, h } from 'vue'
+import { createApp, h, Fragment } from 'vue'
 import App from './App.vue'
 
 let app = null
@@ -31,7 +31,7 @@ let app = null
 if (process.env.NODE_ENV === 'development') {
   const VueAxe = require('vue-axe')
   app = createApp({
-    render: () => h('div', {}, [h(App), h(VueAxe.VueAxePopup)])
+    render: () => h(Fragment, [h(App), h(VueAxePopup)])
   })
   app.use(VueAxe.default)
 } else {
