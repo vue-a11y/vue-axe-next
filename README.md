@@ -31,7 +31,7 @@ let app = null
 if (process.env.NODE_ENV === 'development') {
   const VueAxe = require('vue-axe')
   app = createApp({
-    render: () => h(Fragment, [h(App), h(VueAxePopup)])
+    render: () => h(Fragment, [h(App), h(VueAxe.VueAxePopup)])
   })
   app.use(VueAxe.default)
 } else {
